@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérification de Bot Discord</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Page de mot de passe -->
+    <div id="password-screen">
+        <a href="https://discord.com" id="help-button" target="_blank">Un problème ?</a>
+        <div class="password-container">
+            <h1>🔒 Accès Restreint</h1>
+            <p>Ce site est protégé. Veuillez entrer le mot de passe pour continuer :</p>
+            <div class="input-group">
+                <input type="password" id="password-input" placeholder="Entrez votre mot de passe">
+                <button id="password-submit" class="button">Valider</button>
+            </div>
+            <p id="error-message" style="color: red; display: none;">Mot de passe incorrect. Veuillez réessayer.</p>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <div id="main-content" style="display: none;">
+        <nav>
+            <ul>
+                <li><a href="#" id="show-home">Accueil</a></li>
+                <li><a href="#" id="show-documentation">Documentation</a></li>
+                <li><a href="#" id="show-contact">Contact</a></li>
+                <li><a href="#" id="show-add-bot">Ajouter mon bot</a></li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Section Accueil -->
+            <section id="home-section">
+                <h2>Bienvenue sur le site</h2>
+                <p>Bienvenue !
+                    Avant de commencer la vérification, merci de lire attentivement les informations suivantes :
+                    
+                    Vous trouverez ici toutes les informations nécessaires pour effectuer une bonne vérification.
+                    
+                    Avant de démarrer, merci de lancer un enregistrement d’écran (par exemple avec OBS) afin d’éviter tout problème ou malentendu avec le joueur.</p>
+            </section>
+
+            <!-- Section Documentation -->
+            <section id="documentation-section" style="display: none;">
+                <h2>Documentation</h2>
+                <p>Bienvenue dans la documentation. Sélectionnez une catégorie pour en savoir plus :</p>
+                <div class="categories">
+                    <button class="category-button" data-category="verification">🛠 Comment effectuer une vérification ?</button>
+                    <button class="category-button" data-category="screenSharing">📺 Démarrage du partage d’écran</button>
+                    <button class="category-button" data-category="resetDate">💻 Vérification de la date de réinitialisation du PC</button>
+                    <button class="category-button" data-category="desktopInspection">🗂 Inspection du bureau</button>
+                    <button class="category-button" data-category="fileAnalysis">📁 Analyse des fichiers téléchargés</button>
+                </div>
+                <div id="documentation-content">
+                    <!-- Contenu des catégories sera affiché ici -->
+                </div>
+            </section>
+
+            <!-- Section Contact -->
+            <section id="contact" style="display: none;">
+                <h2>Contact</h2>
+                <p>Pour toute question ou assistance, contactez-nous à <a href="mailto:support@dynasty.com">support@discordbot.com</a>.</p>
+            </section>
+
+            <!-- Section Ajouter mon bot -->
+            <section id="add-bot" style="display: none;">
+                <h2>Ajouter le bot Discord</h2>
+                <p>Ajoutez notre bot Discord pour profiter de toutes ses fonctionnalités :</p>
+                <a href="https://discord.com/oauth2/authorize?client_id=VOTRE_CLIENT_ID&permissions=8&scope=bot" 
+                   target="_blank" 
+                   class="button">Ajouter le bot à votre serveur</a>
+            </section>
+        </main>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
